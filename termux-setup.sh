@@ -20,6 +20,8 @@ curl https://raw.githubusercontent.com/adi1090x/termux-style/master/colors/dracu
 
 rm -rf $tmpdir
 
+cp zshrc $HOME/.zshrc
+
 git clone https://github.com/spaceship-prompt/spaceship-prompt.git --depth=1 $PREFIX/share/spaceship-prompt
 
 ln -sf "$PREFIX/share/spaceship-prompt/spaceship.zsh" "$PREFIX/share/zsh/site-functions/prompt_spaceship_setup"
