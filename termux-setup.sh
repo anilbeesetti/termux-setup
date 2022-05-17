@@ -4,7 +4,7 @@
 tmpdir=$HOME/tmp
 pkg upgrade
 
-pkg install -y wget curl vim zsh git
+pkg install -y wget curl vim zsh git python
 
 mkdir -p $tmpdir
 
@@ -27,3 +27,5 @@ git clone https://github.com/spaceship-prompt/spaceship-prompt.git --depth=1 $PR
 ln -sf "$PREFIX/share/spaceship-prompt/spaceship.zsh" "$PREFIX/share/zsh/site-functions/prompt_spaceship_setup"
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $PREFIX/share/zsh-syntax-highlighting
+
+chsh -s zsh
