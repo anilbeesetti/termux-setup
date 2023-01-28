@@ -4,7 +4,7 @@
 tmpdir=$HOME/tmp
 pkg upgrade
 
-pkg install -y wget curl vim zsh git python
+pkg install -y wget curl vim zsh
 
 mkdir -p $tmpdir
 
@@ -21,6 +21,8 @@ curl https://raw.githubusercontent.com/adi1090x/termux-style/master/colors/dracu
 rm -rf $tmpdir
 
 cp zshrc $HOME/.zshrc
+
+mkdir -p ~/.cache/zsh/history
 
 git clone https://github.com/spaceship-prompt/spaceship-prompt.git --depth=1 $PREFIX/share/spaceship-prompt
 
