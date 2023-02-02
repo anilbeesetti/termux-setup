@@ -32,22 +32,4 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $PREFIX/share
 
 chsh -s zsh
 
-mkdir -p ~/.config && touch ~/.config/starship.toml
-
-cat << EOF  > ~/.config/starship.toml
-# Get editor completions based on the config schema
-"$schema" = 'https://starship.rs/config-schema.json'
-
-format = '$directory'
-
-# Inserts a blank line between shell prompts
-add_newline = false
-
-# Replace the '❯' symbol in the prompt with '➜'
-[character] # The name of the module we are configuring is 'character'
-success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
-
-# Disable the package module, hiding it from the prompt completely
-[package]
-disabled = true
-EOF
+mv starship.toml ~/.config
